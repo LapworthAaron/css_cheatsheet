@@ -1,0 +1,122 @@
+:root {
+    --pink: rgb(232, 102, 236);
+    --grey: rgb(51,57,64);
+  }
+
+html {
+    background-color: var(--grey);
+    color:  var(--pink);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    text-align: center;
+}
+
+#page_summary {
+    color: white;
+}
+
+.flexbox_container {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+    flex-wrap: wrap;
+}
+
+.flexbox_boxes {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border: 1px dashed white;
+    margin-top: 25px;
+    margin-right: 10px;
+    justify-content: flex-start;
+    min-height: 100%;
+    flex: 1 0 100%;
+}
+
+.box_headings {
+    border: 2px solid white;
+    position: relative;
+    top: -6px;
+    left: 17px;
+    width: 92%;
+    z-index: 10;
+    background-color: var(--grey);
+    border-radius: 8px;
+    padding: 0px 5px;
+    margin: -8px;
+}
+
+.box_detail {
+    margin: 10px;
+    font-size: 12px;
+}
+
+.box_code {
+    color: white;
+    border-radius: 8px;
+    font-size: 12px;
+    background-image: linear-gradient(
+                        rgba(232, 102, 236, 0.3) 0%,
+                        rgba(232, 102, 236, 0.6) 100%
+    );
+    margin: 10px;
+    overflow: auto;
+    flex: 1;
+}
+
+pre > code::selection {
+    color: black;
+    background: rgb(71, 204, 180);
+}
+
+pre > code {
+    display: block;
+    word-wrap: normal;
+    margin: 10px;
+  }
+
+.box_headings .flexbox_boxes {
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.box_headings:hover, 
+.flexbox_boxes:hover .box_headings,
+.flexbox_boxes:hover {
+    box-shadow: inset 0px 0px 8px 
+rgba(232, 102, 236, 1), 0 0 15px 
+rgba(232, 102, 236, 1);
+}
+
+footer {
+    text-align: center;
+}
+
+
+@media screen and (min-width: 768px) {
+/* on tablets, set columns to only be 50% of the width and not grow */
+.flexbox_boxes {
+    flex: 0 0 47%;
+    max-width: 47%;
+}
+
+/* select the last child to grow to full width if it has space to grow */
+.flexbox_boxes:last-child {
+    flex-grow: 1;
+}
+}
+  
+/* media query for larger screens */
+@media screen and (min-width: 992px) {
+header {
+    width: 75%;
+}
+
+.flexbox_boxes {
+    flex: 0 0 32%;
+    max-width: 32%;
+}
+}

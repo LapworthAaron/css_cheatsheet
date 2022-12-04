@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/styles.css" type="text/css" rel="stylesheet">
+    <title>CSS Cheatsheet</title>
+</head>
+<body>
+    <header id="title">
+        <h1 id="page_heading">CSS Snippet Cheatsheet</h1>
+        <p id="page_summary">Ever have trouble recalling the exact syntax for your favourite CSS code? Give it a permanent home and add it to this page! Select any snippet below and it'll automatically select all of the code for you to copy.</p>
+    </header>
+
+    <main>
+        <section id="rows" class="flexbox_container">
+            <section id="flexbox_row" class="flexbox_boxes">
+                    <h2 class="box_headings">Flexbox Row</h2>
+                    <p class="box_detail">Use these three properties to create a Flexbox row layout</p>
+                    <pre class="box_code"><code>.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+}</code></pre>
+            </section>
+            <section id="flexbox_col" class="flexbox_boxes">
+                <h2 class="box_headings">Flexbox column</h2>
+                <p class="box_detail">Use this to create a Flexbox column layout</p>
+                <pre class="box_code"><code>.row {
+    display: flex;
+    flex-direction: column;
+}</code></pre>
+            </section>
+            <section id="cssgrid" class="flexbox_boxes">
+                <h2 class="box_headings">CSS Grid Layout</h2>
+                <p class="box_detail">Build a 12-column layout using CSS Grid</p>
+                <pre class="box_code"><code>.grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 
+repeat(12, 1fr);
+}</code></pre>
+            </section>
+            <section id="linear_grad" class="flexbox_boxes">
+                <h2 class="box_headings">Linear Gradients</h2>
+                <p class="box_detail">This will create a background linear gradient from top to bottom</p>
+                <pre class="box_code"><code>.linear-gradient-background {
+    background-image: linear-
+gradient (
+        rgba(232, 102, 236, 0.3) 0%,
+        rgba(232, 102, 236, 0.6) 100%
+    )
+}</code></pre>
+            </section>
+            <section id="box_transition_glow" class="flexbox_boxes">
+                <h2 class="box_headings">Box Transition Glow</h2>
+                <p class="box_detail">Use transition and box shadows to glow on hover</p>
+                <pre class="box_code"><code>.code-card .card-header {
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.code-card:hover, 
+.code-card:hover .card-header {
+    box-shadow: inset 0px 0px 8px 
+rgba(232, 102, 236, 1), 0 0 15px 
+rgba(232, 102, 236, 1);
+}</code></pre>
+            </section>
+            <section id="overlay_card" class="flexbox_boxes">
+                <h2 class="box_headings">Overlay Card with Title</h2>
+                <p class="box_detail">Use position properties and negative margins to raise elements higher than their natural starting point.</p>
+                <pre class="box_code"><code>.card-header {
+    position: relative;
+    margin-top: -20px;
+}</code></pre>
+            </section>
+        </section>
+    
+    </main>
+
+    <footer>
+        <h3>Made with <span role="img" aria-label="heart">❤️</span>️ and CSS</h3>
+    </footer>
+</body>
+</html>
+
